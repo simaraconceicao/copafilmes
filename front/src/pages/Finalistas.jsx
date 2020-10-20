@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import Header from '../components/Header'
-import api from '../services/api'
 
 import '../styles/pages/finalistas.css'
 
@@ -27,22 +26,20 @@ const Finalistas = ()=>{
                 subtitle="Resultado Final"
                 description="Veja o resultado do campeonato filmes de forma simples e rápida"
             />
-            {
-                <>
-                   
-                        
-                        <div className = "card-resultado" >                           
-                            
-                            <h3><span>1º</span>{campeao}</h3>
-                            <h3><span>2º</span>{vice}</h3>          
-                            
-                        </div>
-                        
-                    
-                </>
+
+            <div className = "card-resultado" >                         
+                <div className="card-resultado-campeao">
+                    <h5>1º:</h5>
+                    <h3>{campeao}</h3>                    
+                </div>
+                <div className="card-resultado-vice">
+                    <h5>2º:</h5>
+                    <h3>{vice}</h3>                    
+                </div>                    
+            </div>
 
                 
-            }
+            
             
         </div>
     )
